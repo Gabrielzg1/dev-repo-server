@@ -2,19 +2,16 @@ import mongoose from "mongoose";
 
 const repositorySchema = new mongoose.Schema(
   {
-    email: {
+    name: {
       type: String,
       required: true,
     },
     url: {
       type: String,
-      required: true,
+      requeired: true,
       unique: true,
     },
-    userId: {
-      type: String,
-      requeired: true,
-    },
+    userId: { type: String, required: true },
   },
   {
     timestamps: true,
