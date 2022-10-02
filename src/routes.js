@@ -23,6 +23,9 @@ routes.delete("/users/:id", UsersController.destroy);
 //Repository routes
 routes.get("/users/:user_id/repositories", RepositoriesController.index);
 routes.post("/users/:user_id/repositories", RepositoriesController.create);
-routes.delete("/users/:user_id/repositories", RepositoriesController.destroy);
+routes.delete(
+  "/users/:user_id/repositories/:id",
+  RepositoriesController.destroy
+);
 
 export default routes;
